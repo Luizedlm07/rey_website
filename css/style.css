@@ -9,11 +9,11 @@
 
 
 :root {
-    --main-color: #c10a01;
+    --main-color: #990901;
     --main-text-color: #fff;
     --main-text-color-option: #000;
     --border-color: #dfcf5b;
-    --background-color: #dfcf5b;
+    --secundary-color: #dfcf5b;
 }
 
 
@@ -30,9 +30,10 @@ header {
     left: 0;
     right: 0;
     width: 100%;
-    background-color: var(--background-color);
+    background-color: var(--secundary-color);
     color: #fff;
     border-bottom: 2px solid var(--border-color);
+    z-index: 9999;
 }
 
 nav ul {
@@ -79,38 +80,70 @@ nav ul li {
     right: 100;
     justify-content: center;
     position: relative;
+    
+}
+#home-icon {
+    justify-content: center;
 }
 
 #home-icon img {
-    width: 100px;
-    height: 100px;
+    width: 90px;
+    height: 90px;
     border-radius: 50%;
-    position: absolute;
+    position: relative;
     left: 25%;
+    max-width: 150px;
 }
 
 #head-btn {
-    flex-grow: 1.5;
-    font-size: 20px;
+    flex-grow: 1.2;
+    font-size: 16px;
     transition: 0.2s ease-in-out;
+    margin-right: 15px;
+    margin-left: 20px;
+    border-bottom: solid var(--main-color) 2px;
+    position: relative;
+    border-radius: 3px;
+
 }
 
-#head-btn #dropdown-btn {
-    color: var(--main-text-color-option);
+#head-btn-dropdown {
+    flex-grow: 1.2;
+    font-size: 16px;
+    transition: 0.2s ease-in-out;
+    margin-right: 15px;
+    margin-left: 20px;
+    border-bottom: solid var(--main-color) 2px;
+    position: relative;
+    border-radius: 3px;
+
+}
+
+
+#head-btn-dropdown #dropdown-btn {
+    color: var(--secundary-color);
+    border-bottom: 1px solid var(--secundary-color);
+    margin: 2px;
 }
 
 
 #head-btn:hover{
     background-color: var(--main-color);
     border-radius: 3px;
-}
-
-
-#head-btn:hover a {
     color: var(--main-text-color);
 }
 
-#head-btn #dropdown-btn:hover {
+#head-btn-dropdown:hover{
+    background-color: var(--main-color);
+    border-radius: 3px;
+    color: var(--main-text-color);
+}
+
+#head-btn-dropdown:hover a, #head-btn:hover a {
+    color: var(--main-text-color);
+}
+
+#head-btn-dropdown #dropdown-btn:hover {
     background-color: var(--main-color);
     color: var(--main-text-color);
 }
@@ -123,22 +156,25 @@ nav ul li {
    /*left: 26.5%;*/
     border-radius: 0px 0px 10px 10px;
     top: 100%;
-    left: 10;
-    width: 100px;
-    height: 110px;
+    left: 0;
+    width: 100%;
+    height: 100px;
     display: block;
     opacity: 0;
     visibility: hidden;
-    background-color: var(--main-text-color);
-    border: 3px solid var(--main-color);
+    background-color: var(--main-color);
+    border: 3px solid var(--main-text-color);
     border-top: 0px;
     transition: all 0.2s ease-in-out;
 }
 
-.dropdown:hover .dropdown-menu{
-
+.dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
+}
+
+#head-btn:hover .dropdown #head-btn {
+    border: 3px solid var(--main-text-color-option);
 }
 
 
@@ -148,7 +184,7 @@ main {
     margin-top: 150px;
     padding: 10px;
     width: 100%;
-    height: 1000px;
+    height: 2000px;
     justify-content: center;
 }
 
@@ -157,13 +193,12 @@ main {
     display: flex;
     opacity: 1;
     color: var(--main-text-color-option);
-    justify-content: center;
     align-items: top;    
     width: 100%;
-    height: 100%;
-    background-color: var(--background-color);
+    height: 80%;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: right;
+
     align-items: center;
     gap: 130px;
 }
@@ -177,40 +212,120 @@ h1 {
     top: 100px
 }
 
-div div {
+section div {
     flex: 1;
     position: relative;
     width: 100%;
-    background-color: var(--main-text-color);
+    background-image: linear-gradient(290deg, var(--secundary-color) 40%, #fff0 70% );
     display: flex;
     justify-content: space-between;
+    border-radius: 10px;
 }
 
-#box-1 {
-    justify-content:end;
-}
-
-div #product-1 {
-    opacity: 1;
+#main-container #box-1 {
     position: relative;
+    
+}
+
+div #esfihas-img {
+    position: absolute;
+    left: 0;
+    justify-content: left;
+    width: 600px;
+    height: 90%;
+}
+
+div p {
+    position: absolute;
+    bottom: 0;
+    left: 0;
     margin: 15px;
+    font-size: 10px;
+    color: #fff;
+}
+
+div #describe{
+    position: relative;
+    top: 50px;
+    left: 100px;
+    width: 250px;
+    margin: 15px;
+    font-size: 18px;
+    color: #fff;
+    text-align: right;
+    text-shadow: var(--main-text-color-option) 2px 1px 3px;
+}
+
+div #describe-left{
+    position: absolute;
+    top: 40px;
+    left: 20px;
+    width: 280px;
+    margin: 15px;
+    font-size: 18px;
+    color: #fff;
+    text-align: left;
+    text-shadow: var(--main-text-color-option) 2px 1px 3px;
+}
+
+div p a {
+    text-decoration: none;
+    color: #211d1d;
+}
+
+div #pizza-img {
+    position: absolute;
+    right: -100px;
+    justify-content: right;
+    width: 600px;
+    height: 90%;
+}
+
+div #pizza-img2 {
+    position: absolute;
+    right: 40%;
+    top: 50%;
+    bottom: 100;
+    justify-content: right;
+    align-items: end;
+    width: 700px;
+    height: 60%;
+}
+
+#box-1, #box-3 {
+    justify-content:end;
+    width: 80%;  
 }
 
 #box-2 {
+    background-image: linear-gradient(70deg, var(--secundary-color) 40%, #fff0 70% );
+    width: 80%;
     opacity: 1;
 }
 
-div #product-2 {
+div #product-title {
+    opacity: 1;
     position: relative;
+    left: -20px;
     margin: 15px;
+    height: 10%;
+    color: var(--main-text-color);
+    text-shadow: var(--main-text-color-option) 3px 2px 3px;
 }
 
-#box-3 {
-    text-align: right;
-    justify-content:end;
-}
-
-div #product-3 {
+div #product-title-left {
+    opacity: 1;
     position: relative;
     margin: 15px;
+    right: -20px;
+    height: 10%;
+    color: var(--main-text-color);
+    text-shadow: var(--main-text-color-option) 3px 2px 3px;
+}
+
+#box-2 #link-2{
+    position: relative;
+    align-items: flex-end;
+    justify-content:right;
+    top: 90%;
 }
