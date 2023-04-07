@@ -181,6 +181,7 @@ nav ul li {
 
 
 /* Main */
+
 main {
 
     margin-top: 150px;
@@ -190,8 +191,8 @@ main {
     justify-content: center;
 }
 
-
-.products-container{
+section {
+    margin: 20px;
     display: flex;
     opacity: 1;
     color: var(--main-text-color-option);
@@ -200,10 +201,11 @@ main {
     height: 80%;
     flex-direction: column;
     justify-content: right;
-
     align-items: center;
     gap: 130px;
 }
+
+/* Product-section */
 
 #section-title {
     color: var(--main-text-color);
@@ -218,7 +220,7 @@ main {
 
 }
 
-section div {
+.products-container div {
     flex: 1;
     position: relative;
     width: 100%;
@@ -228,7 +230,7 @@ section div {
     border-radius: 10px;
 }
 
-#products-container #box-1 {
+.products-container #box-1 {
     position: relative;
     
 }
@@ -352,3 +354,14 @@ div #product-title-left {
     top: 100%;
 }
 
+
+/* lojas-section */
+
+.stores-container div {
+    flex: 1;
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 10px;
+}
