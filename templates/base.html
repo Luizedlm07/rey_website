@@ -1,0 +1,23 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    {% include 'parciais/_head.html' %}
+</head>
+<body>
+    <header>    <!-- Cabeçalho -->
+        {% include 'parciais/_header.html' %}
+    </header>
+
+    <main>  <!-- Conteúdo principal -->
+        {% block 'conteudo' %} {% endblock %} 
+    </main>
+
+    <footer>    <!-- Rodapé -->
+
+    </footer>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

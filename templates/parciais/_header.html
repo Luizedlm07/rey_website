@@ -1,0 +1,24 @@
+{% load static %}
+
+
+<nav>
+    <ul>
+      <li id="rey-container">
+        <a id="home-icon" href="{% url 'index' %}">
+          <img src="{% static 'img/rey-icon.png'%}" alt="Rey das Esfihas"></a>
+      </li>
+      <li id="head-btn"><a href="{% url 'index' %}">Início</a></li>
+      <li class="dropdown" id="head-btn-dropdown">
+        <a href="{% url 'produtos' %}">Produtos</a>
+        <ul class="dropdown-menu">
+          <li><a id="dropdown-btn" href="#">Pizzas</a></li>
+          <li><a id="dropdown-btn" href="#">Esfihas</a></li>
+          <li><a id="dropdown-btn" href="#">Bebidas</a></li>
+        </ul>
+      </li>
+      <li id="head-btn"><a href="#">Nossas lojas</a></li>
+      <li id="head-btn"><a href="#">Sobre Nós</a></li>
+      <li id="head-btn"><a href="#">Trabalhe Conosco</a></li>
+      <li id="head-btn"><a href="#">Contatos</a></li>
+    </ul>
+  </nav>
