@@ -251,6 +251,8 @@ main .loja-container {
 main .loja-container img {
     position: relative;
     width: 200px;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
 }
 
 .loja-title {
@@ -258,9 +260,12 @@ main .loja-container img {
     color: var(--main-text-color-option);
 }
 
-.endereco {
+.loja-container .endereco {
     position: relative;
     color: var(--main-text-color-option);
+    font-size: 15px;
+    margin: 5px;
+    margin-bottom: 20px;
 }
 
 .cardapio {
@@ -308,6 +313,7 @@ main .loja-container img {
 
 .whatsapp {
     margin: 15px;
+    margin-bottom: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -349,6 +355,10 @@ main .loja-container img {
 main #home-title {
     position: absolute;
     top: 110px;
+    border-bottom: 4px solid #dfcf5b;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    text-shadow: 10px 4px 10px var(--main-text-color-option);
 }
 
 /* Product-section */
@@ -356,7 +366,7 @@ main #home-title {
 #section-title {
     color: var(--main-text-color);
     text-shadow: 10px 4px 10px var(--main-text-color-option);
-    margin: 15px;
+    margin: 40px;
     position: absolute;
     justify-content: center;
     top: 75px;
